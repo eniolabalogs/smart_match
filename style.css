@@ -508,20 +508,7 @@ section{
     font-weight: 200;
     size: 50px;
 }
-/* Responsive Adjustment for Larger Screens */
-@media (min-width: 768px) {
-    .section-header {
-        font-size: 4.2rem;
-    }
-    .section-subheader {
-        font-size: 2.2rem;
-    }
-}
-.container .title{
-    color: black;
-    size: 50px;
-    
-}
+
 /* General Reset */
 * {
     margin: 0;
@@ -678,4 +665,204 @@ body {
 
 .bottom-nav nav a:hover {
     text-decoration: underline;
+}
+/* Base CSS - No changes to desktop styling */
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Jacquard12:wght@300;400;500;600&display=swap");
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    border: none;
+    outline: none;
+    scroll-behavior: smooth;  
+}
+
+html {
+    font-size: 60%; /* Base font size for desktop */
+    overflow-x: hidden;
+}
+
+:root {
+    --bg-color: #afeaff;
+    --second-bg-color: #273b4a;
+    --text-color: rgb(0, 0, 0);
+    --main-color: #afeaff;
+    --box-color: #f6f2f2;
+    --darker-box-color: #d9d9d9;
+}
+
+body {
+    font-family: "Poppins", sans-serif;
+    background: var(--bg-color);
+    color: var(--text-color);
+}
+
+a {
+    color: #333;
+}
+
+ul {
+    list-style: none;
+}
+
+img {
+    max-width: 100%;
+}
+
+section {
+    min-height: 100vh;
+    padding: 10rem 5%; /* Adjust padding for flexibility */
+}
+
+.home, .signin {
+    display: flex;
+    flex-direction: column; /* Stack items for smaller screens */
+    align-items: center;
+    justify-content: center;
+    gap: 3rem; /* Adjust gap for smaller screens */
+}
+
+.home-content, .signin-content {
+    text-align: center;
+}
+
+.home-content h1, .signin-content h1 {
+    font-size: 5rem; /* Reduced font size */
+    margin-top: 1rem;
+}
+
+.home-content h3, .signin-content h3 {
+    font-size: 2rem;
+}
+
+.home-content p, .signin-content p {
+    font-size: 1.2rem;
+}
+
+.home-image img {
+    width: 50vw; /* Adjust image size for smaller screens */
+    border-radius: 50%;
+    box-shadow: 0 0 15px var(--main-color);
+}
+
+.social-icons a {
+    font-size: 2rem;
+    padding: 0.8rem;
+    margin: 2rem 0.4rem;
+}
+
+.btn-group {
+    display: flex;
+    flex-direction: column; /* Stack buttons on smaller screens */
+    gap: 1rem;
+}
+
+.btn {
+    font-size: 1.6rem;
+    padding: 1rem 2rem;
+}
+
+.header {
+    font-size: 2rem;
+    padding: 1rem 0;
+}
+
+/* Responsive Design for Smaller Screens */
+@media only screen and (max-width: 768px) {
+    html {
+        font-size: 50%; /* Reduce base font size */
+    }
+
+    section {
+        padding: 5rem 2%;
+    }
+
+    .home, .signin {
+        gap: 2rem;
+    }
+
+    .home-content h1, .signin-content h1 {
+        font-size: 4rem;
+    }
+
+    .home-content h3, .signin-content h3 {
+        font-size: 1.8rem;
+    }
+
+    .home-content p, .signin-content p {
+        font-size: 1.2rem;
+    }
+
+    .home-image img {
+        width: 60vw; /* Further reduce image size */
+    }
+
+    .social-icons a {
+        font-size: 1.6rem;
+        padding: 0.6rem;
+    }
+
+    .btn {
+        font-size: 1.4rem;
+        padding: 0.8rem 1.5rem;
+    }
+
+    .navbar ul {
+        flex-direction: column; /* Stack nav items */
+        align-items: center;
+        gap: 1rem;
+    }
+
+    .navbar ul li a {
+        font-size: 1.6rem;
+        margin: 0;
+        padding: 0.5rem 1rem;
+    }
+
+    .bottom-nav nav a {
+        font-size: 1.4rem;
+    }
+
+    .profile-section {
+        flex-direction: column; /* Stack profile info */
+        align-items: center;
+        text-align: center;
+    }
+
+    .profile-info {
+        flex-direction: column; /* Stack profile details */
+        align-items: center;
+    }
+
+    .profile-details h2, .profile-details h3 {
+        font-size: 2rem;
+    }
+
+    .stats {
+        flex-direction: column; /* Stack stats */
+        gap: 1rem;
+    }
+
+    .stat-item {
+        font-size: 1.6rem;
+    }
+
+    .medical-info {
+        padding: 1.5rem;
+    }
+
+    .medical-info h3 {
+        font-size: 2rem;
+    }
+
+    .info-item label {
+        font-size: 1.6rem;
+    }
+
+    .info-item select {
+        font-size: 1.4rem;
+    }
 }

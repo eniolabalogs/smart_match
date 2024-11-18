@@ -717,17 +717,8 @@ section {
     padding: 10rem 5%; /* Adjust padding for flexibility */
 }
 
-.home, .signin {
-    display: flex;
-    flex-direction: column; /* Stack items for smaller screens */
-    align-items: center;
-    justify-content: center;
-    gap: 3rem; /* Adjust gap for smaller screens */
-}
 
-.home-content, .signin-content {
-    text-align: center;
-}
+
 
 .home-content h1, .signin-content h1 {
     font-size: 5rem; /* Reduced font size */
@@ -783,6 +774,17 @@ section {
     .home, .signin {
         gap: 2rem;
     }
+    .home, .signin {
+        display: flex;
+        flex-direction: column; /* Stack items for smaller screens */
+        align-items: center;
+        justify-content: center;
+        gap: 3rem; /* Adjust gap for smaller screens */
+    }
+    .home-content, .signin-content {
+        text-align: center;
+    }
+    
 
     .home-content h1, .signin-content h1 {
         font-size: 4rem;

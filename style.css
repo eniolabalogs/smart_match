@@ -1,0 +1,681 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Jacquard12:wght@300;400;500;600&display=swap");
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    border: none;
+    outline: none;
+    scroll-behavior: smooth;  
+}
+
+html {
+    font-size: 60%;
+    overflow-x: hidden;
+}
+
+:root {
+    --bg-color: #afeaff;
+    --second-bg-color: #273b4a;
+    --text-color: rgb(0, 0, 0);
+    --main-color: #afeaff;
+    --box-color: #f6f2f2;
+    --darker-box-color: #d9d9d9;
+
+}
+
+body {
+    font-family: "Poppins", sans-serif;
+    background: var(--bg-color);
+    color: var(--text-color);
+}
+.body .home .home-content .jacquard-12-regular {
+    font-family: "Jacquard 12", serif;
+    font-weight: 400;
+    font-style: normal;
+  }
+a {
+    color: #333;
+}
+
+ul {
+    list-style: none;
+}
+
+img {
+    max-width: 100%;
+}
+section{
+    min-height: 100vh;
+    padding: 10rem 12%;
+}
+.home{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 15rem;
+}
+.home-content{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+.home-content h1{
+    font-size: 8rem;
+    font-weight: 700;
+    margin-top: 1.5rem;
+    line-height: 1;
+}
+.home-content h3{
+    font-size: 3rem;
+    margin: 1rem 0;
+}
+.home-content p{
+    font-size: 1.5rem;
+    font-weight: 500;
+    line-height: 1.8;
+}
+.home-image img{
+    width: 32vw;
+    border-radius: 50%;
+    box-shadow:0 0 25px var(--main-color);
+    transition: 0.4s ease-in-out;
+}
+.home-image img:hover{
+    box-shadow: 0 0 25px var(--main-color),
+                0 0 50px var(--main-color),
+                0 0 100px var(--main-color);
+}
+.social-icons a{
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 3rem;
+    padding: 1rem;
+    background: transparent;
+    border: 2px solid var(--main-color);
+    border-radius: 50%;
+    color: var(--main-color);
+    margin: 3rem 0.5rem;
+    transition: 0.5 ease;
+}
+.social-icons a:hover{
+    color: var(--text-color);
+    background-color: var(--main-color);
+    transform: scale(1.2) translateY(-5px);
+    box-shadow: 0 0 25px var(--main-color);    
+}
+.btn-group{
+    display: flex;
+    gap: 1.5rem;
+}
+.btn{
+    display: inline-block;
+    padding: 1rem 3rem;
+    background: var(--box-color);
+    box-shadow: 0 0  10px var(--box-color);
+    border-radius: 3rem;
+    font-size: 1.8rem;
+    color: black;
+    border: transparent;
+    font-weight: 600;
+    transition: 0.5s ease-in-out;
+}
+.btn:hover{
+    transform: scale(1.05);
+    box-shadow: 0 0 20px var(--main-color),
+}
+.signin{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 15rem;
+}
+.signin-content{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+.signin .left-text h1 {
+    font-size: 100px; /* Increase size as needed */
+    font-weight: 700;
+    color: #000000; /* Adjust color as needed */
+    margin-left: 20px; /* Add space from the left */
+}
+
+.signin-content h1{
+    font-size: 8rem;
+    font-weight: 700;
+    margin-top: 1.5rem;
+    line-height: 1;
+}
+.signin-content h3{
+    font-size: 3rem;
+    margin: 1rem 0;
+}
+.signin-content p{
+    font-size: 1.5rem;
+    font-weight: 500;
+    line-height: 1.8;
+}
+.signin-content input[type="email"],
+.signin-content input[type="password"] {
+    padding: 10px;
+    font-size: 16px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-family: 'Poppins', sans-serif;
+    color: #333;
+    transition: border-color 0.3s;
+}
+
+.signin-content input[type="email"]:focus,
+.signin-content input[type="password"]:focus {
+    border-color: #007bff;
+    outline: none;
+}
+
+/* Styles for the submit button */
+.signin-content .btn {
+    padding: 10px;
+    font-size: 16px;
+    background-color:var(--box-color);
+    color: #000000;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    text-align: center;
+    text-decoration: none;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 600;
+}
+
+.signin-content .btn:hover {
+    background-color: var(--second-bg-color);
+}
+
+
+.header{
+    background-color: black;
+    color: white;
+}
+.navbar ul {
+    display: flex;
+    flex-wrap: wrap; /* Ensure items wrap within the container */
+}
+
+.navbar ul li a {
+    font-size: 1.8rem;
+    color: white;
+    margin-left: 2rem; /* Adjusted margin */
+    font-weight: 500;
+    border-bottom: 3px solid transparent;
+    transition: 0.3s ease;
+    display: block;
+    padding: 10px 20px;
+    text-decoration: none;
+}
+
+.navbar ul li a:hover {
+    border-bottom: 3px solid var(--main-color);
+    color: var(--main-color);
+}
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: Arial, sans-serif;
+    background-color: #a7e3fc;
+  }
+  
+  /* Top Navbar */
+  .top-nav {
+    background-color: #000;
+    color: #fff;
+    padding: 10px;
+    text-align: center;
+  }
+  
+  .top-nav h1 {
+    font-weight: bold;
+    font-size: 24px;
+  }
+  
+  /* Main Content */
+  .container {
+    padding: 20px;
+  }
+  
+  /* Vitals Section */
+  .vitals {
+    margin-bottom: 0;
+  }
+  
+  .vitals h2 {
+    font-size: 24px;
+    color: #273b4a;
+    margin-bottom: 10px;
+  }
+  
+  .vitals-info {
+    background-color: #273b4a;
+    padding: 15px;
+    border-radius: 10px;
+    color: #fff;
+  }
+  
+  .vitals-info p {
+    font-size: 18px;
+    margin-bottom: 5px;
+  }
+  
+  /* Recent Labs Section */
+  .recent-labs {
+    margin-bottom: 0;
+  }
+  
+  .recent-labs h2 {
+    font-size: 24px;
+    color: #497cb1;
+    margin-bottom: 10px;
+  }
+  
+  .lab-info {
+    background-color: #f0f0f0;
+    padding: 15px;
+    border-radius: 10px;
+    color: #000;
+    font-size: 18px;
+    text-align: center;
+  }
+  
+  .add-lab {
+    font-size: 20px;
+    font-weight: bold;
+    color: #497cb1;
+  }
+  
+  /* Nutritional Information Section */
+  .nutritional-info {
+    margin-bottom: 0;
+  }
+  
+  .nutritional-info h2 {
+    font-size: 24px;
+    color: #497cb1;
+    margin-bottom: 10px;
+  }
+  
+  .nutrition-details {
+    background-color: #f0f0f0;
+    padding: 15px;
+    border-radius: 10px;
+    color: #000;
+  } 
+  
+  .nutrition-details h3 {
+    font-size: 20px;
+    margin-bottom: 10px;
+  }
+  
+  .nutrition-details ul {
+    list-style-type: disc;
+    padding-left: 20px;
+  }
+  
+  .nutrition-details li {
+    font-size: 18px;
+    margin-bottom: 5px;
+  }
+  
+  /* Bottom Navbar */
+  .bottom-nav {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    background-color: #000;
+    padding: 10px 0;
+  }
+  
+  .bottom-nav nav {
+    display: flex;
+    justify-content: space-around;
+  }
+  
+  .bottom-nav a {
+    color: #fff;
+    font-size: 18px;
+    text-decoration: none;
+    text-align: center;
+  }
+  
+  .bottom-nav a:hover {
+    text-decoration: underline;
+  }
+  .container {
+    width: 60%;
+    margin: 0 auto;
+    padding: 40px;
+}
+
+/* Adjusting font sizes and spacing for desktop */
+.header {
+    font-size: 2.4rem;
+    padding: 20px 0;
+}
+
+.vitals, .recent-labs, .nutritional-info {
+    margin-bottom: 20px;
+}
+
+.vitals h2, .recent-labs h2, .nutritional-info h2 {
+    font-size: 3rem;
+}
+
+.vitals-info p, .lab-info, .nutrition-details h3, .nutrition-details li {
+    font-size: 2rem;
+}
+
+/* Desktop-specific styling for Lab Items in Labs Page */
+.lab-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    margin-bottom: 15px;
+    font-size: 2rem;
+    border-radius: 10px;
+    background-color: var(--darker-box-color);
+    transition: background-color 0.3s;
+}
+
+.lab-item:hover {
+    background-color: #e0f7ff;
+}
+
+.lab-item-text {
+    font-size: 2rem;
+}
+
+.plus-button {
+    font-size: 2.4rem;
+    color: #497cb1;
+    cursor: pointer;
+}
+
+/* Desktop-specific styling for Specialist Items in Connect Page */
+.specialist-item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px;
+    margin-bottom: 15px;
+    border-radius: 10px;
+    background-color: var(--darker-box-color);
+    font-size: 2rem;
+}
+
+.profile-icon {
+    width: 80px;
+    height: 80px;
+    font-size: 3rem;
+    margin-right: 20px;
+}
+
+.specialist-info {
+    flex-grow: 1;
+    text-align: left;
+    padding-left: 10px;
+}
+
+.specialist-info div {
+    font-size: 2rem;
+    color: #333;
+}
+
+.specialist-info div:last-child {
+    font-size: 1.8rem;
+    color: #666;
+}
+
+/* Adjust Navbar for Desktop */
+.navbar {
+    padding: 15px 0;
+}
+
+.navbar a {
+    font-size: 2.2rem;
+}
+
+/* Social Icons on Desktop */
+.social-icons a {
+    font-size: 2.4rem;
+    padding: 1rem;
+    margin: 2rem 0.8rem;
+    border: 2px solid #333;
+}
+
+.social-icons a:hover {
+    transform: scale(1.1) translateY(-3px);
+}
+/* Styling for Labs and Connect Headings */
+.section-header {
+    font-size: 3.6rem; /* Larger font size for main heading */
+    color: #273b4a; /* Darker shade for main heading */
+    font-weight: 600;
+    text-align: center;
+    margin-bottom: 1rem;
+    font-family: 'Poppins', sans-serif;
+}
+
+.section-subheader {
+    font-size: 2rem; /* Slightly smaller font for subheading */
+    color: #497cb1; /* Use a complementary color */
+    font-weight: 400;
+    text-align: center;
+    font-family: 'Poppins', sans-serif;
+    margin-bottom: 2rem;
+}
+
+/* Decorative Line Under Header */
+.section-header::after {
+    content: "";
+    display: block;
+    width: 50px;
+    height: 3px;
+    background-color: #497cb1;
+    margin: 8px auto 16px;
+    border-radius: 3px;
+}
+
+/* Adding shadow and background */
+.section-container {
+    background-color: #f0f8ff;
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+.container .title{
+    font-weight: 200;
+    size: 50px;
+}
+/* Responsive Adjustment for Larger Screens */
+@media (min-width: 768px) {
+    .section-header {
+        font-size: 4.2rem;
+    }
+    .section-subheader {
+        font-size: 2.2rem;
+    }
+}
+.container .title{
+    color: black;
+    size: 50px;
+    
+}
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #afeaff;
+    color: #000;
+}
+
+.header {
+    background-color: black;
+    color: white;
+    padding: 1rem;
+    text-align: center;
+    font-size: 2.4rem;
+    font-weight: bold;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 2rem;
+}
+
+/* Profile Section */
+.profile-section {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 2rem;
+}
+
+.profile-info {
+    display: flex;
+    align-items: center;
+}
+
+.profile-pic {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    margin-right: 1.5rem;
+}
+
+.profile-details h2 {
+    font-size: 2.4rem;
+    color: #273b4a;
+}
+
+.profile-details h3 {
+    font-size: 2rem;
+    font-weight: bold;
+}
+
+/* Stats Section */
+.stats {
+    display: flex;
+    gap: 2rem;
+}
+
+.stat-item {
+    display: flex;
+    align-items: center;
+    background-color: #f6f2f2;
+    padding: 1rem;
+    border-radius: 8px;
+}
+
+.stat-item h4 {
+    margin-right: 1rem;
+    font-size: 1.8rem;
+}
+
+.stat-item button {
+    font-size: 1.6rem;
+    padding: 0.5rem;
+    background-color: #d9d9d9;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    margin: 0 0.5rem;
+}
+
+.stat-item span {
+    font-size: 1.8rem;
+}
+
+/* Medical Information Section */
+.medical-info {
+    background-color: #f6f2f2;
+    padding: 2rem;
+    border-radius: 8px;
+    margin-bottom: 2rem;
+}
+
+.medical-info h3 {
+    font-size: 2.4rem;
+    font-weight: bold;
+    text-align: center;
+    color: #273b4a;
+    margin-bottom: 1rem;
+}
+
+.info-item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 1rem;
+}
+
+.info-item label {
+    font-size: 1.8rem;
+    font-weight: 500;
+}
+
+.info-item select {
+    padding: 0.5rem;
+    font-size: 1.6rem;
+    border-radius: 4px;
+    border: 1px solid #ccc;
+    background-color: #e6e6e6;
+}
+
+/* Actions Section */
+.actions {
+    display: flex;
+    gap: 3rem;
+    justify-content: center;
+    margin-bottom: 2rem;
+}
+
+
+
+/* Bottom Navigation */
+.bottom-nav {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    background-color: #000;
+    padding: 1rem 0;
+    text-align: center;
+}
+
+.bottom-nav nav a {
+    font-size: 1.6rem;
+    color: #fff;
+    text-decoration: none;
+    margin: 0 1.5rem;
+}
+
+.bottom-nav nav a:hover {
+    text-decoration: underline;
+}
